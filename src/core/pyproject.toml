@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "core"
+dynamic = ["version"]
+description = "Core functionality"
+authors = [
+  { name = "Miguel Villa Floran", email = "miguel.villafloran@gmail.com" },
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+dependencies = ["typer>=0.12.5"]
+
+[project.scripts]
+core = "core.cli:app"
+
+[tool.hatch.version]
+path = "src/core/__init__.py"
